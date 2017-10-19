@@ -22,7 +22,7 @@
       }
     },
     "versionFirst": "3.12.1",
-    "uniqCompNum": 7,
+    "uniqCompNum": 11,
     "versionPublish": "4.3.4",
     "favicon": "@PROJECT_PATH@/assets/images/18-3-128x128.png",
     "noImageResize": "",
