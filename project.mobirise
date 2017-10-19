@@ -22,7 +22,7 @@
       }
     },
     "versionFirst": "3.12.1",
-    "uniqCompNum": 11,
+    "uniqCompNum": 13,
     "versionPublish": "4.3.4",
     "favicon": "@PROJECT_PATH@/assets/images/18-3-128x128.png",
     "noImageResize": "",
@@ -43,8 +43,8 @@
         {
           "_customTemplate": true,
           "_afterNavbarItem": false,
-          "_customHTML": "<iframe id=\"top10casinoenligne.fr\" src=\"http://cssdeck.com/labs/full/diuuzywc\" height=\"100%\" width=\"100%\" style=\"position:fixed;top:-30px\"></iframe>\n",
-          "_customCSS": "",
+          "_customHTML": "<iframe id=\"top10casinoenligne.fr\" src=\"http://cssdeck.com/labs/full/diuuzywc\" height=\"100%\" width=\"100%\" style=\"position:fixed;top:-30px\" scrolling=\"yes\"></iframe>\n",
+          "_customCSS": "@media screen and (max-width: 600px) {\n  #container, #header, #content, #footer {\n    float: none;\n    width: auto;\n  }\n}\n@media screen and (max-width: 600px) {\n  #container, #header, #content, #footer {\n    float: none;\n    width: auto;\n  }\n #subtitle, #share, #slider, #sidebar {\n    display:none;\n  }\n}\n@media screen and (max-width: 600px) {\n  #container, #header, #content, #footer {\n    float: none;\n    width: auto;\n  }\n #subtitle, #share, #slider, #sidebar{\n    display:none;\n  }\n  p{ font-size: 2em; }\n}",
           "alias": "code-editor",
           "_tags": [
             "Extension"
@@ -53,20 +53,6 @@
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_anchor": "custom-html-1"
-        },
-        {
-          "_customTemplate": true,
-          "_afterNavbarItem": false,
-          "_customHTML": "<!-- Type valid HTML here -->\n",
-          "_customCSS": "",
-          "alias": "code-editor",
-          "_tags": [
-            "Extension"
-          ],
-          "_name": "pro.custom-html",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [],
-          "_anchor": "custom-html-2"
         }
       ]
     }

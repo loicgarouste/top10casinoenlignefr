@@ -551,7 +551,28 @@ h1, h2, h3, h4, h5, h6,
 @isPublish: true;
 
 #custom-html-1 {
+@media screen and (max-width: 600px) {
+  #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+  }
 }
-
-#custom-html-2 {
+@media screen and (max-width: 600px) {
+  #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+  }
+ #subtitle, #share, #slider, #sidebar {
+    display:none;
+  }
 }
+@media screen and (max-width: 600px) {
+  #container, #header, #content, #footer {
+    float: none;
+    width: auto;
+  }
+ #subtitle, #share, #slider, #sidebar{
+    display:none;
+  }
+  p{ font-size: 2em; }
+}}
