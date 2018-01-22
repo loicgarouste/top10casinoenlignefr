@@ -39,12 +39,16 @@
     "noImageResize": "",
     "google-analytics": "",
     "cookiesAlert": "",
-    "siteUrl": "undefined",
+    "siteUrl": "http://top10casinoenligne.fr",
     "versionFirst": "4.6.2",
     "uniqCompNum": 12,
     "versionPublish": "4.6.2",
     "path": "@PROJECT_PATH@",
-    "screenshot": "screenshot.png"
+    "screenshot": "screenshot.png",
+    "robotsText": "User-agent: *\r\nDisallow: /cgi-bin\r\n",
+    "robotsSwitcher": "on",
+    "sitemapSwitcherAuto": "on",
+    "sitemapSwitcher": "on"
   },
   "pages": {
     "index.html": {
