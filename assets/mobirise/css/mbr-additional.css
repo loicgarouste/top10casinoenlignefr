@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Russo+One:400);
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One:400);
 @import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
 @import url(https://fonts.googleapis.com/css?family=Comfortaa:300,400,700);
 
@@ -23,7 +23,7 @@ body {
   line-height: 1.6;
 }
 .display-1 {
-  font-family: 'Russo One', sans-serif;
+  font-family: 'Fredoka One', display;
   font-size: 5.6rem;
 }
 .display-2 {
@@ -1160,6 +1160,7 @@ body {
 .cid-qHuulKYWMX {
   padding-top: 60px;
   padding-bottom: 150px;
+  background-image: url("https://i.imgur.com/sOVp9MQ.gif");
 }
 .cid-qHuulKYWMX .mbr-section-title {
   margin: 0;
@@ -1234,7 +1235,7 @@ body {
 }
 .cid-qHuulKYWMX .mbr-section-title,
 .cid-qHuulKYWMX .underline SPAN {
-  color: #2d10a3;
+  color: #ffef00;
 }
 .cid-qHuulKYWMX .form-title {
   color: #ffffff;
