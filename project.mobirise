@@ -42,7 +42,7 @@
     "cookiesAlert": "",
     "siteUrl": "http://top10casinoenligne.fr",
     "versionFirst": "4.6.2",
-    "uniqCompNum": 25,
+    "uniqCompNum": 27,
     "versionPublish": "4.6.2",
     "path": "@PROJECT_PATH@",
     "screenshot": "screenshot.png",
@@ -858,6 +858,102 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container-fluid": {
+              "padding": "0 3rem"
+            },
+            ".media-container-column": {
+              "padding": "0 2rem"
+            },
+            ".mbr-section-title": {
+              "display": "inline-block",
+              "position": "relative",
+              "color": "#2d10a3"
+            },
+            "@media (max-width: 767px)": {
+              ".container-fluid": {
+                "padding": "0 1rem"
+              }
+            }
+          },
+          "_name": "content7",
+          "_customHTML": "<section group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!--Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Secondary Title\" name=\"showSubtitle\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/img/04.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container-fluid\">\n        <div class=\"row justify-content-center\">\n            <div class=\"col-12 col-lg-6 col-md-8 align-center\" mbr-if=\"showTitle || showSubtitle\">\n                <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style mbr-light pb-3\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\">\n                    Secondary Title\n                </h3>\n                <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\">Ce que l'on recherche lorsque nous évaluons ubn casino en ligne</h2>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qKn43dJO7J",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content7-q"
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            "& when (@gradientBg)": {
+              "background": "linear-gradient(0deg, @bgColor, @bgColor2)"
+            },
+            ".counter-container": {
+              "color": "#767676",
+              "ol": {
+                "margin-bottom": "0",
+                "li": {
+                  "margin-bottom": "1rem"
+                },
+                "& when (@stylizedCounters)": {
+                  "counter-reset": "myCounter",
+                  "li": {
+                    "list-style": "none",
+                    "padding-left": ".5rem",
+                    "&:before": {
+                      "position": "absolute",
+                      "left": "0px",
+                      "margin-top": "-10px",
+                      "counter-increment": "myCounter",
+                      "content": "counter(myCounter)",
+                      "display": "inline-block",
+                      "text-align": "center",
+                      "margin": "5px 10px",
+                      "line-height": "40px",
+                      "transition": "all .2s",
+                      "color": "contrast(@counterColor)",
+                      "background": "@counterColor",
+                      "& when (@gradientCounter)": {
+                        "background": "linear-gradient(135deg, @counterColor, @counterColor2)"
+                      },
+                      "width": "40px",
+                      "height": "40px",
+                      "border-radius": "50%",
+                      "& when (@squareCounters)": {
+                        "border-radius": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            ".mbr-text B": {
+              "color": "#2d10a3"
+            }
+          },
+          "_name": "content4",
+          "_customHTML": "<section class=\"mbr-section article content4\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"checkbox\" title=\"Square Counters\" name=\"squareCounters\" condition=\"stylizedCounters\" checked>\n        <input type=\"color\" title=\"Counter Bg Color\" name=\"counterColor\" value=\"#2d10a3\" condition=\"stylizedCounters\">\n        <input type=\"checkbox\" title=\"Gradient Counter Bg\" name=\"gradientCounter\" checked condition=\"stylizedCounters\">\n        <input type=\"color\" title=\"Counter Bg Color2\" name=\"counterColor2\" value=\"#2d10a3\" condition=\"stylizedCounters && gradientCounter\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Gradient Background\" name=\"gradientBg\" checked>\n        <input type=\"color\" title=\"Background Color2\" name=\"bgColor2\" value=\"#ffffff\" condition=\"gradientBg\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text counter-container col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                <ol>\n                    <li><b style=\"font-size: 1rem; background-color: initial;\">Licence &amp; Sécurité. La première chose à vérifier pour un casino en ligne est leur licence. Leur organisation de licence vous en dira beaucoup avant même de creuser plus profondément. Les casinos réputés sont généralement autorisés par l'un des régulateurs fiables et leurs informations de licence seront faciles à trouver.</b></li><li><b>De plus, notre équipe d'examen se penche sur les normes et l'historique de sécurité du casino pour voir s'il y a eu des plaintes sérieuses de la part de joueurs concernant des paiements retardés ou refusés, des fermetures de compte suspectes et similaires. Un grand nombre de plaintes est généralement un drapeau rouge, indiquant que le casino peut ne pas être bon.</b></li><li><b style=\"font-size: 1rem; background-color: initial;\">Banking &nbsp;(dépôts et retraits). Le financement de votre compte de casino en ligne et le retrait de vos gains sont deux processus cruciaux qui assurent une expérience de jeu agréable. Chez OnlineCasinoReports, nous accordons une attention particulière aux méthodes bancaires disponibles ainsi qu'aux délais de traitement des retraits. De bons casinos fiables offriront de nombreuses options à leurs joueurs, des cartes de crédit (MasterCard, Visa, etc.) aux portefeuilles électroniques (Skrill, Neteller) et même parfois au bitcoin. De plus, les retraits seront rapides, habituellement le même jour, sans retards inutiles ni complication.</b></li><li><b style=\"font-size: 1rem; background-color: initial;\">Sélection de jeu. Bien qu'il ne soit pas nécessaire pour un casino en ligne d'offrir des centaines de jeux différents, il ajoute certainement des points, surtout s'ils satisfont également aux autres critères. Dans nos commentaires, nous creusons sous la surface pour savoir ce qui est vraiment offert. Que vous recherchiez une grande sélection de machines à sous, que vous aimiez jouer au vidéo poker ou à des jeux de table, ou que vous préfériez les casinos en direct, les critiques sur notre site vous aideront à trouver la bonne solution.</b></li><li><b style=\"font-size: 1rem; background-color: initial;\">Service client. Enfin, nous essayons de tester le support client en les contactant via les méthodes disponibles et en leur présentant une question ou un problème réel. Une réponse rapide et utile dans le traitement de la question ajoutera des points supplémentaires à la note global.</b></li><li><b>Une liste raffinée de casinos en ligne approuvés. Une fois qu'un casino en ligne a satisfait à toutes ces exigences, il est ajouté à notre liste approuvée. Vous pouvez être assuré que les casinos approuvés trouvés sur top10casinoeenligne.fr sont sûrs pour jouer avec, rapide à traiter vos retraits, et offrent une expérience de jeu agréable. Pour suivre les changements, nous revoyons régulièrement nos critiques et les casinos respectifs pour nous assurer qu'ils sont restés au top de leur forme et méritent toujours d'être recommandés. Si nous remarquons que la réalité de la situation ne correspond plus à notre examen, elle est modifiée pour refléter ce fait et, parfois, les casinos sont complètement supprimés de la liste approuvée.</b></li></ol>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qKn3C5Yq0j",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content4-p"
         },
         {
           "_styles": {
